@@ -105,8 +105,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
     vendor.display.disable_partial_split=1 \
     vendor.display.disable_rotator_downscale=1 \
-    vendor.display.perf_hint_window=50
-    #vendor.display.disable_inline_rotator=1 \
+    vendor.display.perf_hint_window=50 \
+    vendor.display.enable_default_color_mode=0 \
+    vendor.gralloc.disable_ubwc=0 \
+    vendor.gralloc.enable_fb_ubwc=1
+
+# LED
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.asus.led.on=1
+
+# Location
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.location.osnlp.package=com.google.android.gms \
+    ro.location.osnlp.region.package=""
 
 # Enable backpressure for GL comp
 PRODUCT_PROPERTY_OVERRIDES += \
